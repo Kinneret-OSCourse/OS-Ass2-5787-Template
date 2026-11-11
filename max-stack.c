@@ -4,7 +4,7 @@
  * Tool for finding the maximum size for the program's stack.
  * 
  * Author: Michael J. May
- * Version: 2025
+ * Version: 2026
  */
 
 // Static variable to track the total stack size used
