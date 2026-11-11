@@ -8,7 +8,7 @@
  * Tool for finding the maximum number of file descriptors.
  * 
  * Author: Michael J. May
- * Version: 2025
+ * Version: 2026
  */
 
 int main() {
