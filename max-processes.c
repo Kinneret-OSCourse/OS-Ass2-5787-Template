@@ -9,7 +9,7 @@
  * Tool for finding the maximum number of processes that can be made.  If the result is 0, clean up the existing processes and try it again.
  * 
  * Author: Michael J. May
- * Version: 2025
+ * Version: 2026
  */
 
 int main() {
