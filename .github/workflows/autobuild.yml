@@ -1,0 +1,37 @@
+name: Store map and limits output
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository   
+        uses: actions/checkout@v4
+      - name: Map build
+        run: gcc -o map map.c recur.c
+      - name: Map output
+        run: ./map > map-output.txt
+      - name: Archive map output
+        uses: actions/upload-artifact@v4
+        with:
+          name: map-output
+          path: map-output.txt
+          retention-days: 30
+      - name: Limits build
+        run: gcc -o limits limits.c
+      - name: Limits output
+        run: ./limits > limits-output.txt
+      - name: Archive limits output
+        uses: actions/upload-artifact@v4
+        with:
+          name: limits-output
+          path: limits-output.txt    
+          retention-days: 30
+
